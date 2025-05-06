@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Adatmodell és lekérdezések</title>
+</head>
+
+<body style="font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; background-color: #f9f9f9;">
+
+    <div style="background-color: #fff; border: 1px solid #ccc; padding: 20px; border-radius: 8px;">
+        <h2 style="color: #333;">Adatmodell</h2>
+
+        <p><strong>Berendezés</strong> = {
+            <span style="text-decoration: underline;">Gyáriszám</span>, Típus, Megnevezés }
+        </p>
+
+        <p><strong>Alkatrész</strong> = {
+            <span style="text-decoration: underline;">Cikkszám</span>, Megnevezés, Mértékegység }
+        </p>
+
+        <p><strong>Művelet</strong> = {
+            <span style="text-decoration: underline;">MűveletKód</span>, Megnevezés, Óradíj }
+        </p>
+
+        <p><strong>Megrendelő</strong> = {
+            <span style="text-decoration: underline;">MegrendelőAz</span>, Név, Lakcím, Telefonszám, EMailCím }
+        </p>
+
+        <p><strong>Munkalap</strong> = {
+            <span style="text-decoration: underline;">MunkalapSorszám</span>,
+            <span style="border-bottom: 2px dashed black;">MegrendelőAz</span>,
+            <span style="border-bottom: 2px dashed black;">Gyáriszám</span>,
+            LétrehozásDátuma }
+        </p>
+
+        <p><strong>FelhasználtAlkatrész</strong> = {
+            <span style="text-decoration: underline;">TételSorszám</span>,
+            <span style="border-bottom: 2px dashed black;">MunkalapSorszám</span>,
+            <span style="border-bottom: 2px dashed black;">Cikkszám</span>,
+            Mennyiség }
+        </p>
+
+        <p><strong>ElvégzettMűvelet</strong> = {
+            <span style="text-decoration: underline;">TételSorszám</span>,
+            <span style="border-bottom: 2px dashed black;">MunkalapSorszám</span>,
+            <span style="border-bottom: 2px dashed black;">MűveletKód</span>,
+            IdőszükségletÓrában }
+        </p>
+
+        <h2 style="color: #333; margin-top: 30px;">Lekérdezések</h2>
+        <ol style="padding-left: 20px;">
+            <li>Milyen típusú berendezéseken került elvégzésre a „…” megnevezésű művelet?</li>
+            <li>Hány 20000-nél drágább művelet van?</li>
+            <li>Írjuk ki műveletenként, hogy eddig összesen mennyi időbe került az elvégzésük!</li>
+        </ol>
+    </div>
+
+</body>
+
+</html>
